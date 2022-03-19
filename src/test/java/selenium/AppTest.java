@@ -55,7 +55,7 @@ public class AppTest {
 
     @After
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
 
     @Test
@@ -199,7 +199,7 @@ public class AppTest {
 
         //wait2.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".cheque-indent")));
 
-        driver.close();
+        //driver.close();
         System.out.println("Fin test.");
     }
 }
