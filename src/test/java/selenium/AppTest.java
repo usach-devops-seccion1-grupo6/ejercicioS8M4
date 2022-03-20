@@ -42,7 +42,7 @@ public class AppTest {
 
         URL url;        
         try {
-                url = new URL("http://localhost:4444");
+                url = new URL("http://sfirefox:4444");
                 driver = new RemoteWebDriver(url, options);
         } catch (MalformedURLException e) {
                 e.printStackTrace();

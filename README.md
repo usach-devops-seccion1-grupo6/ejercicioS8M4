@@ -1,13 +1,11 @@
 # Instrucciones para que funciones con jenkins
 
-## Instalación de Selenium GRID
+## Instalación de Selenium Firefox
 
-<code>docker network create grid</code>
+<code> docker run --rm --name sfirefox -d -p 4444:4444 -p 7900:7900 --shm-size="2g" --net grid selenium/standalone-firefox:latest</code>
 
-<code> docker run --rm --name segrid -d -p 4444:4444 -p 7900:7900 --shm-size="2g" --net grid selenium/standalone-firefox:latest</code>
+Luego conectar el sfirefox a la red de jenkins
 
-Luego conectar el segrid a la red de jenkins
-
-<code>docker network connect "tu-red-jenkins" segrid</code>
+<code>docker network connect "tu-red-jenkins" sfirefox</code>
 
 Con eso y la ejecucion debiera funcionar.
